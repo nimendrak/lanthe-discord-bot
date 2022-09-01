@@ -9,6 +9,7 @@ import nextcord
 from nextcord.ext.commands import Bot
 from nextcord.ext import commands
 from pathlib import Path
+import os
 
 app = Flask('nextcord bot')
 
@@ -85,4 +86,4 @@ async def admin_help(self, context: commands.Context):
     await context.reply(embed=embed)
     log.info(f"{context.author} used the admin help command")
 
-notifications_centre.run(BOT.config["token"], reconnect=True)
+notifications_centre.run(os.environ['TOKEN'], reconnect=True)
