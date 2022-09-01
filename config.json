@@ -1,0 +1,23 @@
+{
+    "NOTIFICATIONS_BOT": {
+        "identifer": "notifications_centre",
+        "bot_prefix": "!",
+        "token": "",
+        "application_id": 11111111111111,
+        "bot_avatar": "assets/lanthe_logo.png",
+        "owners": [
+            527789934845886474
+        ]
+    },
+    "GUILD_DATA": {
+        "GUILD_ID": 11111111111111,
+        "EMBED_COLOR": "0xff0000",
+        "AUTH_ROLES_ID": [
+            11111111111111
+        ],
+        "ANNOUNCEMENTS_CHANNEL": 11111111111111,
+        "CONTENT_UPDATES_CHANNEL": 11111111111111,
+        "LANTHE_ONLY_CHANNEL": 11111111111111,
+        "LANTHE_CLAN_ROLE": 11111111111111
+    }
+}
