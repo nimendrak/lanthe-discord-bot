@@ -72,7 +72,7 @@ class Notifications(commands.Cog, name="Notifications Cog"):
                     > We're streaming live on TikTok, follow this link to check it out. **Link:** {link}
                     """,
                 )
-            await interaction.response.send_message(f"{interaction.user.mention} sent a notification by @ {time.strftime('%a, %d %b %Y %H:%M:%S')}.", ephemeral=False)
+            await interaction.response.send_message(f"{interaction.user.mention} sent a notification @ {time.strftime('%a, %d %b %Y %H:%M')}.", ephemeral=False)
             log.warning(f"{interaction.user} sent a notification to | {content_updates_channel}") 
         else:
             await interaction.response.send_message(f"You don't have the required permissions to use this command.", ephemeral=False)
