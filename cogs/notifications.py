@@ -38,7 +38,7 @@ class Notifications(commands.Cog, name="Notifications Cog"):
             choices={"TikTok Post": "tt", "Youtube Short": "yts", "Youtube Video": "ytv", "TikTok Live": "ttl"},
         ),
     ):
-        announcement_channel = self.client.get_channel(GUILD_DATA.get("ANNOUNCEMENTS_CHANNEL"))
+        live_updates_channel = self.client.get_channel(GUILD_DATA.get("LIVE_UPDATES_CHANNEL"))
         yt_updates_channel = self.client.get_channel(GUILD_DATA.get("YT_UPDATES_CHANNEL"))      
         tt_updates_channel = self.client.get_channel(GUILD_DATA.get("TT_UPDATES_CHANNEL"))
 
@@ -70,7 +70,7 @@ class Notifications(commands.Cog, name="Notifications Cog"):
                 )
                 await interaction.response.send_message(f"{interaction.user.mention} sent a **Youtube Video** notification @ {current_time}", ephemeral=False)
             elif platform == "ttl":
-                await announcement_channel.send(
+                await live_updates_channel.send(
                     content = f"""
                     @everyone
                     > We're streaming live on TikTok, follow this link to check it out. **Link:** {link}
